@@ -1,25 +1,30 @@
-import nexmo
+from twilio.rest import Client
 import schedule
 import time
 
 
 def fun():
     a = 0
-    f = open('file1.txt', "r")
+    f = open('file.txt', "r")
     t = round(time.time())
+    account_sid = 'AC6016ffb984b8e96953a017215c27e782'
+    auth_token = '57e13725780981a6a74621de25ad2c12'
+    client = Client(account_sid, auth_token)
     for m in f:
-        if(((int(m)-t)<=15000)and(int(m)-t)>0):
+        if(((int(m)-t) <= 15000)and(int(m)-t)>0):
             a = 1
             break
-    if (a == 1):
-        client = nexmo.Client(key='c6e745b0', secret='............Rpme')
-        client.send_message({
-            'from': 'Nexmo',
-            'to': '917761055179',
-            'text': 'Contest is about to start. All the best. See you on the leader board.'
-        })
+
+    if(a == 1):
+        message = client.messages.create(
+            to="+917761055179",
+            from_="+12053509974",
+            body="The contest is about to start. All the best!"
+        )
+        print(message.sid)
+
     else:
-        print("Contest is not near at the moment. Message will be sent when it is near.")
+        print("Message will be sent when contest is near")
 
 
 schedule.every().hour.do(fun)

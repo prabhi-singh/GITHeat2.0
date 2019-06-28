@@ -11,7 +11,7 @@ print("Rank : "+l['rank'])
 print("Country : "+l['country'])
 print("Maximum rating :"+str(l['maxRating']))
 print("Maximum rank : "+l['maxRank'])
-f = open('file1.txt', 'w')
+f = open('file.txt', 'w')
 res = input("To get the list of upcoming contests type y else n\r\n")
 if(res == 'y'):
     ipt = input("Need a reminder press y else n\r\n")
