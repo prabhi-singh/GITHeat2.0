@@ -7,8 +7,8 @@ def fun():
     a = 0
     f = open('file.txt', "r")
     t = round(time.time())
-    account_sid = 'AC6016ffb984b8e96953a017215c27e782'
-    auth_token = '57e13725780981a6a74621de25ad2c12'
+    account_sid = 'AC60..............................'
+    auth_token = '57e1............................'
     client = Client(account_sid, auth_token)
     for m in f:
         if(((int(m)-t) <= 15000)and(int(m)-t)>0):
