@@ -8,6 +8,6 @@
 1. 'requests'
 2. 'schedule'
 3. 'time'
-4. 'nexmo' 
+4. 'twilio' 
 
 #You should have a Twilio account and a twilio phone number as well to ensure that the reminder message is sent.
