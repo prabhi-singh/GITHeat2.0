@@ -17,7 +17,7 @@ def fun():
 
     if(a == 1):
         message = client.messages.create(
-            to="+917761055179",
+            to="+91xxxxxxxxxx",
             from_="+12053509974",
             body="The contest is about to start. All the best!"
         )
